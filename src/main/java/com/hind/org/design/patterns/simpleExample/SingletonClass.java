@@ -11,12 +11,19 @@ public class SingletonClass {
         // Des initialisations peuvent être ajoutées ici.
     }
 
+    /*
+     * public static SingletonClass getInstance() {
+     * if (instance == null) {
+     * // Creation of instance (only if it does not exist)
+     * instance = new SingletonClass();
+     * }
+     * return instance;
+     * }
+     */
+    // Dans la partie on essai de pour créer une nouvelle instance à chaque appel ce
+    // qui va générer une erreur dans le test
     public static SingletonClass getInstance() {
-        if (instance == null) {
-            // Creation of instance only if does not exist
-            instance = new SingletonClass();
-        }
-        return instance;
+        return new SingletonClass();
     }
 
     public void performTask() {
